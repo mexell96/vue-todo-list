@@ -1,8 +1,12 @@
 import { createStore } from "vuex";
+import { todosModule } from "./todosModule";
+import { todoModule } from "./todoModule";
+import { loginModule } from "./loginModule";
 
 export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: {
+    todos: todosModule,
+    todo: todoModule,
+    login: loginModule,
+  },
 });
