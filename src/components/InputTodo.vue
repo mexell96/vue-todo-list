@@ -4,7 +4,7 @@
       type="text"
       v-model.trim="newTodo"
       @keyup.enter="createTodo"
-      placeholder="Wrire a note"
+      :placeholder="placeholder"
     />
   </form>
 </template>
@@ -14,6 +14,7 @@ export default {
   data() {
     return {
       newTodo: "",
+      placeholder: "Wrire a note",
     };
   },
   methods: {

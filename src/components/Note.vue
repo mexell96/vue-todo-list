@@ -1,7 +1,9 @@
 <template>
-  <input type="checkbox" :id="id" :value="note" @click="checkedItem(id)" />
-  <label for="jack">{{ note }}</label>
-  <button @click="deleteItem(id)">X</button>
+  <li>
+    <input type="checkbox" :id="id" :value="note" @click="checkedItem(id)" />
+    <span @click="$router.push(`/${id}`)">{{ note }}</span>
+    <button @click="deleteItem(id)">X</button>
+  </li>
 </template>
 
 <script>

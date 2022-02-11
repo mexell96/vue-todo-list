@@ -1,16 +1,16 @@
 <template>
   <h2>ToDo List</h2>
   <ul v-if="myTodos.length > 0">
-    <li v-for="td in myTodos" :key="td.id">
-      <Note
-        :note="td.title"
-        :id="td.id"
-        @deleteTodo="removeTodo"
-        @checkedTodo="checkedTodo"
-      />
-    </li>
+    <Note
+      v-for="td in myTodos"
+      :key="td.id"
+      :note="td.title"
+      :id="td.id"
+      @deleteTodo="removeTodo"
+      @checkedTodo="checkedTodo"
+    />
   </ul>
-  <h4 v-if="myTodos.length === 0">Empty list.</h4>
+  <h4 v-else>Empty list.</h4>
 </template>
 
 <script>

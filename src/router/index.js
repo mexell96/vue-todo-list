@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import TodoList from "../views/TodoList.vue";
+import Todo from "../views/Todo.vue";
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
     path: "/login",
     name: "Login",
     component: () => import("../views/Login.vue"),
+  },
+  {
+    path: "/:id",
+    component: Todo,
   },
 ];
 

@@ -10,6 +10,9 @@ export const todosModule = {
     double(state) {
       return state.number * 2;
     },
+    getTodos(state) {
+      return state.myTodos;
+    },
   },
   mutations: {
     setTodos(state, myTodos) {
